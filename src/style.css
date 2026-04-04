@@ -22,6 +22,57 @@ button:focus {
   box-shadow: none !important;
 }
 
+/* custom */
+
+.text-link {
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    z-index: 1;
+    padding-left: 25px;
+    &:before,
+    &:after {
+        content:attr(data-content);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    &:before {
+        color: #00ffff;
+        z-index: -1;
+        padding-left: 25px;
+      }
+
+    &:after {
+        color: #ff00ff;
+        z-index: -2;
+        padding-left: 25px;
+    }
+    
+    &:hover {
+        &:before {
+            animation: glitchy 0.3s ease 0.3s infinite;
+        }
+        
+        &:after {
+            animation: glitchy 0.3s ease infinite reverse;
+        }
+    }
+}
+
+@keyframes glitchy {
+    0%   {transform: translate(-2px, 2px);}
+    25%  {transform: translate(-2px, -2px);}
+    50%  {transform: translate(2px, 2px);}
+    75%  {transform: translate(2px, -2px);}
+    100%  {transform: translate(-2px, 2px);}
+}
+
+
 /* --------- */
 /*  Preloader */
 /* --------- */
@@ -147,7 +198,7 @@ button:focus {
 
 @media (max-width: 767px) {
   .navbar {
-    padding: 1rem 2rem !important;
+    padding: 0rem 0rem !important;
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
   }
@@ -160,7 +211,7 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
+  height: 1.6em !important;
   width: 2.5em !important;
 }
 
@@ -261,7 +312,7 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
+  /*z-index: 0;
   /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg); */
   background-position: top center;
   background-repeat: no-repeat;
@@ -286,7 +337,7 @@ button:focus {
 }
 
 .main-name {
-  color: #cd5ff8;
+  color: #cd5ff8; 
 }
 
 .Typewriter__wrapper {
