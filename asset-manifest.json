@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.5ca46549.css",
-    "main.js": "/static/js/main.e7427156.js",
+    "main.js": "/static/js/main.d30fdb7f.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
+    "static/media/GT-R-Underglow.png": "/static/media/GT-R-Underglow.502ea2f1b33cb5dcf6e8.png",
+    "static/media/Hand-cctv.png": "/static/media/Hand-cctv.345dc2bcb8bbb22943b3.png",
     "static/media/leaf.png": "/static/media/leaf.ff2616f664c8c0ceab91.png",
     "static/media/emotion.png": "/static/media/emotion.eabfc16e7a146ab15778.png",
-    "static/media/suicide.png": "/static/media/suicide.9c86cd7138a398c45fa5.png",
     "static/media/output.jpg": "/static/media/output.127cd220fa0a2f8d27e8.jpg",
     "static/media/codeEditor.png": "/static/media/codeEditor.1b585492490c8c1cace9.png",
     "static/media/blog.png": "/static/media/blog.fb8ab7f271a937d5fc01.png",
     "static/media/home-main.svg": "/static/media/home-main.541f8179af8209ce03ccf2178fe62dbf.svg",
     "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
-    "static/media/chatify.png": "/static/media/chatify.7206044e0b5cdad44726.png",
     "static/media/Soumyajit_Behera.pdf": "/static/media/Soumyajit_Behera.0a483621860835f0c118.pdf",
     "static/media/logo.png": "/static/media/logo.06ac6a7164117a9b3a41.png",
     "static/media/star-icon.png": "/static/media/star-icon.7ae89ccb923f4da3f882.png",
@@ -45,11 +45,11 @@
     "static/media/Haskell.svg": "/static/media/Haskell.084122e02bec646ad186861642137932.svg",
     "static/media/Firebase.svg": "/static/media/Firebase.de3da3a4068963dd30fc0f885f170428.svg",
     "main.5ca46549.css.map": "/static/css/main.5ca46549.css.map",
-    "main.e7427156.js.map": "/static/js/main.e7427156.js.map",
+    "main.d30fdb7f.js.map": "/static/js/main.d30fdb7f.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5ca46549.css",
-    "static/js/main.e7427156.js"
+    "static/js/main.d30fdb7f.js"
   ]
 }
