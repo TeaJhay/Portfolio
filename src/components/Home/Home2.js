@@ -13,38 +13,34 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
-              <br />
-              <br />
-              I’m proficient in
+              I’m currenlty a
+              <i>
+                <b className="purple">
+                  {" "}printer technician{" "}
+                </b>
+              </i>
+               where I repair, maintain install printers (from industrial to office) for various private, public and governemnt clients around the wide-bay! I have a strong background in 
               <i>
                 <b className="purple">
                   {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
+                  ICT
                 </b>
               </i>
-              — and I enjoy working across both backend and frontend stacks.
+                  , and decided to make this page to sort of document some of my projects, idea's and just experiment with HTML, JS, React and etc.
               <br />
               <br />
-              My key areas of interest include developing
+              
+              I'm practicing some electronic and automotive projects, my most recent projects being 
               <i>
                 <b className="purple">
+                  {" "} DIY underglow, LED Headlights and taillights on the falcon
                   {" "}
-                  Web Applications, Blockchain Solutions,{" "}
                 </b>
               </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
+              — and I'm always looking at improving my homelab, learning more about blockchain and cars!
               <br />
               <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
-              <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
-              </i>
+              If you've got idea's, suggestions or even want advice, my socials are linked
             </p>
           </Col>
           <Col md={4} className="myAvtar">

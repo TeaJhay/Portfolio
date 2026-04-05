@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
   AiFillInstagram,
+  AiOutlineTwitter
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -15,8 +16,8 @@ function Footer() {
         <Col md="4" className="footer-copywright">
           <h3>
             Designed and Developed by{' '}
-            <a href="https://github.com/soumyajit4419" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none'}}>
-            <span className="purple img-fluid">
+            <a href="https://github.com/soumyajit4419" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', position:"relative"}}>
+            <span className="purple img-fluid text-link">
               Soumyajit Behera
             </span>
             </a>
@@ -28,7 +29,7 @@ function Footer() {
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
             <li className="social-icons">
-              <a
+<a
                 href="https://github.com/soumyajit4419"
                 style={{ color: "white" }}
                 target="_blank" 
@@ -37,7 +38,26 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-
+            <li className="social-icons">
+              <a
+                href="https://twitter.com/Soumyajit4419"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiOutlineTwitter />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.linkedin.com/in/soumyajit4419/"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
             <li className="social-icons">
               <a
                 href="https://www.instagram.com/soumyajit4419"

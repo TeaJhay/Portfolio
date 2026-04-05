@@ -33,10 +33,7 @@ function Home() {
               <h1 className="heading-name">
                 I'M
                 {/* <strong className="main-name" data-content="TEEJAY ANDERSON"> TEEJAY ANDERSON</strong> */}
-                <strong className="main-name">
-                    <span className="main-name text-link" data-content="TEEJAY">TEEJAY</span>
-                    <span className="main-name text-link" data-content="ANDERSON">ANDERSON</span>
-                </strong>
+                <strong className="main-name text-link"> TEEJAY ANDERSON</strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
@@ -69,7 +66,7 @@ function Home() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/soumyajit4419"
+                  href="https://github.com/TeaJhay"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -79,27 +76,7 @@ function Home() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
+                  href="https://www.instagram.com/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
