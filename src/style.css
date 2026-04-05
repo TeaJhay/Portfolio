@@ -25,12 +25,13 @@ button:focus {
 /* custom */
 
 .text-link {
-    position: absolute;
+    position: relative;
     display: inline-block;
     text-decoration: none;
     color: #fff;
     z-index: 1;
-    padding-left: 25px;
+    margin-left: 25px;
+    /* padding-left: 20px; */
     &:before,
     &:after {
         content:attr(data-content);
@@ -44,13 +45,13 @@ button:focus {
     &:before {
         color: #00ffff;
         z-index: -1;
-        padding-left: 25px;
+        /* padding-left: 20px; */
       }
 
     &:after {
         color: #ff00ff;
         z-index: -2;
-        padding-left: 25px;
+        /* padding-left: 20px; */
     }
     
     &:hover {
@@ -63,7 +64,12 @@ button:focus {
         }
     }
 }
-
+.text-link:first-child {
+  margin-right: 15px;
+}
+.text-link:last-child {
+  margin-left: 0px;
+}
 @keyframes glitchy {
     0%   {transform: translate(-2px, 2px);}
     25%  {transform: translate(-2px, -2px);}
@@ -324,6 +330,7 @@ button:focus {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
+  z-index: -1;
 }
 
 .heading {

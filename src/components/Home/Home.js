@@ -25,14 +25,18 @@ function Home() {
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hello There!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
+                <span className="wave" role="img" aria-labelledby="wave" style={{ position: 'relative', top: -10, left: -25 }}>
                   <img src={ObiWan} width={48} height={48} />
                 </span>
               </h1>
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name text-link" data-content="TEEJAY ANDERSON"> TEEJAY ANDERSON</strong>
+                {/* <strong className="main-name" data-content="TEEJAY ANDERSON"> TEEJAY ANDERSON</strong> */}
+                <strong className="main-name">
+                    <span className="main-name text-link" data-content="TEEJAY">TEEJAY</span>
+                    <span className="main-name text-link" data-content="ANDERSON">ANDERSON</span>
+                </strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
