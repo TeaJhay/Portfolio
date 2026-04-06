@@ -5,8 +5,8 @@ import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
 import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
+import underglow from "../../Assets/Projects/GT-R-Underglow.png";
+import CCTV from "../../Assets/Projects/CCTV-handheld.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
@@ -23,12 +23,12 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={underglow}
               isBlog={false}
               title="Underglow"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              description="Easy little underglow project for the XR6. Using 5 metres of WS2814A LED's (100 Leds per/m) and an ESP32 with WLED, wired up to a killswitch, breaker and fuse. Goal is to connect an encoder in the cabin to allow enabling and disabling along with the other custom lights."
+              // ghLink="https://github.com/soumyajit4419/Chatify"
+              // demoLink="https://chatify-49.web.app/"
             />
           </Col>
 
@@ -67,10 +67,10 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={CCTV}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
+              title="Handheld CCTV camera"
+              description="I'm keen to get my hands on an older CCTV camera, wire up a DVR and battery to make it portable. Record footage of car meets to an SD card,get that sick vignette, early 90's and early 2000's vibe in the video. SEXSPEC!!!"
               ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
               // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
             />
