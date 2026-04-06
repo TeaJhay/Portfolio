@@ -38,7 +38,7 @@ function AboutCard() {
           <p style={{ color: "rgb(155 126 172)" }}>
             "You consist of body, breath, and mind. The former only as far as they are in your care, while the mind is the only thing that you truly own."{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">Marcus Aurelius</footer>
         </blockquote>
       </Card.Body>
     </Card>

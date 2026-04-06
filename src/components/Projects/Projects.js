@@ -6,7 +6,7 @@ import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
 import editor from "../../Assets/Projects/codeEditor.png";
 import underglow from "../../Assets/Projects/GT-R-Underglow.png";
-import CCTV from "../../Assets/Projects/CCTV-handheld.png";
+import CCTV from "../../Assets/Projects/Hand-cctv.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
