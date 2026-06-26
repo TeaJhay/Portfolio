@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
 
-const News = () => {
-  const [newsItems, setNewsItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  // Working proxies (swap if one fails)
-  const PROXIES = [
-    'https://corsproxy.io/?',  // Simple & reliable
-    'https://thingproxy.freeboard.io/fetch/',  // HTTPS-friendly
-    'https://api.codetabs.com/v1/proxy?quest='  // Another solid option
-  ];
-  const RSS_URL = 'https://www.gamingonlinux.com/article_rss.php?newsonly';
-
-  const fetchWithProxy = async (proxy, url) => {
-    const response = await fetch(`${proxy}${encodeURIComponent(url)}`);
-    if (!response.ok) throw new Error(`Proxy failed: ${response.status}`);
-    return response.text();
-  };
-
-  useEffect(() => {
+function rssNews() {
+    const [newsItems, setNewsItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    
+    // Working proxies (swap if one fails)
+    const PROXIES = [
+      'https://corsproxy.io/?url=',  // Simple & reliable
+      'https://thingproxy.freeboard.io/fetch/',  // HTTPS-friendly
+      'https://api.codetabs.com/v1/proxy?quest='  // Another solid option
+    ];
+    const RSS_URL = 'https://www.gamingonlinux.com/article_rss.php?newsonly';
+    
+    const fetchWithProxy = async (proxy, url) => {
+      const response = await fetch(`${proxy}${encodeURIComponent(url)}`);
+      if (!response.ok) throw new Error(`Proxy failed: ${response.status}`);
+      return response.text();
+    };
+    
     const loadNews = async () => {
       for (const proxy of PROXIES) {
         try {
@@ -27,28 +27,110 @@ const News = () => {
           const parser = new DOMParser();
           const xml = parser.parseFromString(xmlText, 'text/xml');
           const items = Array.from(xml.querySelectorAll('item')).slice(0, 6);
-          const parsedItems = items.map(item => ({
-              title: item.querySelector('title')?.textContent || 'No title',
-              link: item.querySelector('link')?.textContent || '#',
-              pubDate: item.querySelector('pubDate')?.textContent || 'No date',
-              description: item.querySelector('description')?.textContent || 'No description'  // Add this
-              // enclosure: item.querySelector('enclosure') ? { url: item.querySelector('enclosure').getAttribute('url') } : null  // Rarely present
-            }));
-            
-          setNewsItems(parsedItems);
-          setLoading(false);
-          return;  // Success, stop trying proxies
+        
+        } catch (err) {
+          console.warn(`Proxy ${proxy} failed:`, err.message);function rssNews() {
+    const [newsItems, setNewsItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    
+    // Working proxies (swap if one fails)
+    const PROXIES = [
+      'https://corsproxy.io/?',  // Simple & reliable
+      'https://thingproxy.freeboard.io/fetch/',  // HTTPS-friendly
+      'https://api.codetabs.com/v1/proxy?quest='  // Another solid option
+    ];
+    const RSS_URL = 'https://www.gamingonlinux.com/article_rss.php?newsonly';
+    
+    const fetchWithProxy = async (proxy, url) => {
+      const response = await fetch(`${proxy}${encodeURIComponent(url)}`);
+      if (!response.ok) throw new Error(`Proxy failed: ${response.status}`);
+      return response.text();
+    };
+    
+    const loadNews = async () => {
+      for (const proxy of PROXIES) {
+        try {
+          const xmlText = await fetchWithProxy(proxy, RSS_URL);
+          const parser = new DOMParser();
+          const xml = parser.parsfunction rssNews()} {
+    const [newsItems, setNewsItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    
+    // Working proxies (swap if one fails)
+    const PROXIES = [
+      'https://corsproxy.io/?',  // Simple & reliable
+      'https://thingproxy.freeboard.io/fetch/',  // HTTPS-friendly
+      'https://api.codetabs.com/v1/proxy?quest='  // Another solid option
+    ];
+    const RSS_URL = 'https://www.gamingonlinux.com/article_rss.php?newsonly';
+    
+    const fetchWithProxy = async (proxy, url) => {
+      const response = await fetch(`${proxy}${encodeURIComponent(url)}`);
+      if (!response.ok) throw new Error(`Proxy failed: ${response.status}`);
+      return response.text();
+    };
+    
+    const loadNews = async () => {
+      for (const proxy of PROXIES) {
+        try {
+          const xmlText = await fetchWithProxy(proxy, RSS_URL);
+          const parser = new DOMParser();
+          const xml = parser.parseFromString(xmlText, 'text/xml');
+          const items = Array.from(xml.querySelectorAll('item')).slice(0, 6);
+        
         } catch (err) {
           console.warn(`Proxy ${proxy} failed:`, err.message);
         }
       }
       setError('All proxies failed. Try refreshing.');
       setLoading(false);
-    };
+  }
+}
 
-    loadNews();
-  }, []);
+function loadNews() {
+    const parsedItems = items.map(item => ({
+    title: item.querySelector('title')?.textContent || 'No title',
+                link: item.querySelector('link')?.textContent || '#',
+                pubDate: item.querySelector('pubDate')?.teeFromString(xmlText, 'text/xml');
+          const items = Array.from(xml.querySelectorAll('item')).slice(0, 6);
+        
+        } catch (err) {
+          console.warn(`Proxy ${proxy} failed:`, err.message);
+        }
+      }
+      setError('All proxies failed. Try refreshing.');
+      setLoading(false);
+  }
+}
 
+function loadNews() {
+    const parsedItems = items.map(item => ({
+    title: item.querySelector('title')?.textContent || 'No title',
+                link: item.querySelector('link')?.textContent || '#',
+                pubDate: item.querySelector('pubDate')?.te
+        }
+      }
+      setError('All proxies failed. Try refreshing.');
+      setLoading(false);
+  }
+}
+
+function loadNews() {
+    const parsedItems = items.map(item => ({
+    title: item.querySelector('title')?.textContent || 'No title',
+                link: item.querySelector('link')?.textContent || '#',
+                pubDate: item.querySelector('pubDate')?.textContent || 'No date',
+                description: item.querySelector('description')?.textContent || 'No description'  // Add this
+                // enclosure: item.querySelector('enclosure') ? { url: item.querySelector('enclosure').getAttribute('url') } : null  // Rarely present
+              }));
+
+            setNewsItems(parsedItems);
+            setLoading(false);
+            return;  // Success, stop trying proxies
+
+  };
   if (loading) return <div style={{ padding: '1rem' }}>Loading news...</div>;
   if (error) return <div style={{ padding: '1rem', color: 'red' }}>Error: {error}</div>;
 
@@ -68,20 +150,20 @@ return (
       gap: '1.5rem'
     }}>
       {newsItems.map((item, index) => (
-          <div key={index} style={{
-              backgroundImage: 'linear-gradient(rgb(40, 1, 103), rgb(8, 8, 8))',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-              borderRadius: '12px',
-              padding: '1.5rem',
-              transition: 'box-shadow 0.3s ease, transform 0.3s ease',
-              border: '1px solid #eee'
+        <div key={item.pubDate} style={{
+            backgroundImage: 'linear-gradient(rgba(40, 1, 103, 0.86), rgba(8, 8, 8, 0.57))',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+            borderRadius: '12px',
+            padding: '1.5rem',
+            transition: 'box-shadow 0.3s ease, transform 0.3s ease',
+            border: '1px solid #eee'
           }} onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
-              e.currentTarget.style.transform = 'translateY(-4px)';
+            e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+            e.currentTarget.style.transform = 'translateY(-4px)';
           }} onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-          e.currentTarget.style.transform = 'translateY(0)';
-      }}>
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+            e.currentTarget.style.transform = 'translateY(0)';
+        }}>
           <div style={{
               width: '100%',
               height: '12rem',
@@ -159,34 +241,7 @@ return (
         </div>
       ))}
     </div>
-  </>
-);
+  </>  
 
-
-
-//   return (
-//     <div style={{ padding: '1rem', border: '1px solid #ccc', borderRadius: '8px' }}>
-//       <h3 style={{ marginTop: 0 }}>Gaming on Linux News</h3>
-//       <ul style={{ listStyle: 'none', padding: 0 }}>
-//         {newsItems.map((item, i) => (
-//           <li key={i} style={{ marginBottom: '0.5rem' }}>
-//             <a 
-//               href={item.link} 
-//               target="_blank" 
-//               rel="noopener noreferrer"
-//               style={{ color: '#007bff', textDecoration: 'none', fontSize: '0.95em' }}
-//             >
-//               {item.title}
-//             </a>
-//             <br />
-//             <small style={{ color: '#666' }}>
-//               {item.pubDate ? new Date(item.pubDate).toLocaleDateString() : 'No date'}
-//             </small>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-};
-
-export default News;
+    )
+  export default rssNews;
