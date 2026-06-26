@@ -53,7 +53,7 @@ function rssNews() {
         try {
           const xmlText = await fetchWithProxy(proxy, RSS_URL);
           const parser = new DOMParser();
-          const xml = parser.parsfunction rssNews()} {
+          const xml = parser.parseFromString(xmlText, "text/xml");} {
     const [newsItems, setNewsItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
